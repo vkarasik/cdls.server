@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Серверное оборудование</title>
+    <!--build:css css/main.min.css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <!--build:js js/main.min.js -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        //= include/header.html
+        
+        //= include/b-advantages.html
+        
+        //= include/b-callback.html
+
+        //= include/b-servers.html
+        
+        //= include/b-slider.html
+        
+        //= include/b-problem.html
+        
+        //= include/b-popup.html
+           
+        //= include/b-callback.html
+        
+        //= include/b-howto.html
+        
+        //= include/b-contacts.html
+    </div>
+
+<script>
+    var showMenu = document.getElementById('nav');
+    var currentStatus = 'hide';
+    
+    function dropMenu(){
+        if(currentStatus == 'hide'){
+            showMenu.style.display = 'block';
+            currentStatus = 'show';
+        }
+        
+        else if(currentStatus == "show"){
+            showMenu.style.display = 'none';
+            currentStatus = 'hide';
+        }
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $('a[href^="#"]').click(function(){ //берем все ссылки атрибу href которых начинается с #
+          var $element = $('a[name=' + $(this).attr('href').substr(1) + ']');
+          if($element.length == 1) { //на странице есть только 1 элемент с указанным якорем
+             $('html, body').animate({ scrollTop: $element.offset().top }, 500); // анимируем скролл к элементу
+          }     
+          return false;
+        });
+    });
+</script>
+<script type="text/javascript"> // fancybox
+    $(document).ready(function() {
+        $("a[rel=callback]").fancybox({
+            'titlePosition' : 'inside',
+            'transitionIn' : 'none',
+            'transitionOut' : 'none',
+            'overlayOpacity' : 0.7 ,
+            'overlayColor' : '#000',
+            'showNavArrows' : '',
+            'showCloseButton' : 'true',
+            'centerOnScroll' : 'true',
+            'autoWidth' : 'true',
+            'autoScale' : 'true',
+            'autoDimensions' : 'true',
+            'autoResize' : 'true',
+        });
+    });
+</script>
+</body>
+</html>
