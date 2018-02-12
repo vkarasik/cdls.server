@@ -5,17 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Серверное оборудование</title>
-    <!--build:css css/main.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <!-- endbuild -->
-    <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-    <!--build:js js/main.min.js -->
-    <script type="text/javascript" src="js/slider.js"></script>
-    <!-- endbuild -->
-    <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    
 </head>
 <body>
     <div class="container-fluid">
@@ -23,32 +19,32 @@
             <div class="row top-line">
                 <div class="col-xs-6 col-xs-offset-0 col-sm-2 col-sm-offset-0 col-md-1 col-md-offset-1 col-lg-1 col-lg-offset-2">
                     <a href="http://cdls.by/" class="logo">
-                    <img src="img/logo.png" alt="logo" />
+                        <img src="img/logo.png" alt="logo" />
                     </a>
                 </div>
-                <div class="menu-title col-xs-6" onclick="dropMenu()">меню</div>
+                <div class="menu-title col-xs-6">меню</div>
                 <nav id="nav" class="col-xs-12 col-sm-10 col-md-9 col-lg-7">
                     <a href="#servers" id="list">Как&nbsp;выбрать</a>
-                    <a href="#slider">Серверы</a>
+                    <a href="#configurator">Серверы</a>
                     <a href="#howto">Почему&nbsp;мы</a>
                     <a href="#contacts">Контакты</a>
                 </nav>
             </div>
-            
+        
             <div class="row banner">
                 <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
                     <h1>Cерверное оборудование</h1>
-                    <h2>Выберите сервер Lenovo или Asus с учетом своих задач и бюджета, систему хранения под ваши данные, а также сетевые компоненты, удовлетворяющие вашим требованиям</h2>
-                    <form action="mail.php" method="post" name="ContactForm">
-                        <input class="field" placeholder="Ваш телефон" type="tel" name="tel" required />
+                    <h2>Выберите сервер Lenovo или Asus с учетом своих задач и бюджета, систему хранения под ваши данные, а также сетевые
+                        компоненты, удовлетворяющие вашим требованиям</h2>
+                    <form class="form" action="mail.php" method="post" name="contactform">
+                        <input class="field tel" placeholder="Ваш телефон" type="tel" name="tel" required />
                         <input class="send" type="submit" name="submit" value="Заказать звонок" />
                     </form>
                 </div>
             </div>
         </header>
-        
         <section class="row b-advantages">
-           <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
+            <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
                 <h2>Зачем нужен сервер</h2>
                 <span class="line blue"></span>
                 <div class="row">
@@ -64,187 +60,270 @@
                         <img src="img/it.png" alt="" />
                         <p>Сокращение издержек на ИТ</p>
                     </div>
-                </div>    
+                </div>
             </div>
         </section>
-        
         <section class="b-callback">
-            <form action="mail.php" method="post" name="ContactForm">
-                <input class="field" placeholder="Ваше имя" type="text" name="name" required/>
-                <input class="field" placeholder="Ваш телефон" type="tel" name="tel" required />
+            <form class="form" action="mail.php" method="post" name="contactform">
+                <input class="field name" placeholder="Ваше имя" type="text" name="name" required/>
+                <input class="field tel" placeholder="Ваш телефон" type="tel" name="tel" required />
                 <input class="send" type="submit" name="submit" value="Заказать звонок" />
             </form>
         </section>
-
         <section class="row b-servers">
             <a name="servers"></a>
             <h2>Что мы можем предложить</h2>
             <span class="line red"></span>
-            
+        
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-2">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/servers.jpg" alt="">
                         <span class="line red"></span>
                         <h3>Серверные решения</h3>
-                        <p>Большой выбор серверных решений, от лучших производителей: Lenovo и Asus. Стойки, серверы в корпусе форм-фактора tower, блейд-серверы, серверы высокой плотности, серверы для критических задач, комплектующие.</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
+                        <p>Большой выбор серверных решений, от лучших производителей: Lenovo и Asus. Стойки, серверы в корпусе форм-фактора
+                            tower, блейд-серверы, серверы высокой плотности, серверы для критических задач, комплектующие.</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/storage-family.png" alt="">
                         <span class="line red"></span>
                         <h3>Системы хранения данных</h3>
-                        <p>Всегда доступные, простые в управлении и масштабировании
-            DAS, NAS, SAN, ленточные накопители, ПО и системы видеонаблюдения для крупных предприятий.</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
+                        <p>Всегда доступные, простые в управлении и масштабировании DAS, NAS, SAN, ленточные накопители, ПО и системы
+                            видеонаблюдения для крупных предприятий.</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-2">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/networking-family.png" alt="">
                         <span class="line red"></span>
                         <h3>Сети передачи данных</h3>
-                        <p>Высокоскоростные и гибкие сетевые устройства для построения максимально эффективной ИТ-среды. Коммутаторы для установки в стойку и встраиваемые блейд-модули, ПО и многое другое.</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
+                        <p>Высокоскоростные и гибкие сетевые устройства для построения максимально эффективной ИТ-среды. Коммутаторы
+                            для установки в стойку и встраиваемые блейд-модули, ПО и многое другое.</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+            </div>
+        
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/software-family.png" alt="">
                         <span class="line red"></span>
                         <h3>Программное обеспечение</h3>
                         <p>Лучшее на рынке ПО для динамичного бизнеса. Инструменты управления, операционные системы и многое другое.</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-2">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/solutions-family.png" alt="">
                         <span class="line red"></span>
                         <h3>Корпоративные решения</h3>
-                        <p>Проверенные временем решения, обеспечивающие конкурентные преимущества. Оптимальная отправная точка для персонализации решения.</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
+                        <p>Проверенные временем решения, обеспечивающие конкурентные преимущества. Оптимальная отправная точка для персонализации
+                            решения.</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
                     <div class="server-type">
                         <img src="img/services-enterprise.png" alt="">
                         <span class="line red"></span>
                         <h3>Сервисная поддержка</h3>
-                        <p>Информация о технических решениях и гарантийном обслуживании.
-            Мы всегда готовы помочь с настройкой виртуальной или облачной среды вашей компании, а также предоставить гарантийное обслуживание</p>
-                        <a href="#fields" rel="callback" class="request">Оставить заявку</a>
+                        <p>Информация о технических решениях и гарантийном обслуживании. Мы всегда готовы помочь с настройкой виртуальной
+                            или облачной среды вашей компании, а также предоставить гарантийное обслуживание</p>
                     </div>
-                </div>    
-                </div>    
-        </section>
-        
-        <section class="row">
-           <a name="slider"></a>
-            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-               <h2>Серверы lenovo и&nbsp;asus</h2>
-        	   <span class="line red"></span>
-                <div id="slider">
-                    <div class="slide">
-                        <img src="img/RS140.png" />
-                        <div class="slide-text">
-                            <h3>Lenovo ThinkServer RS140</h3>
-                            <p>Процессоры Intel Xeon E3-12x5 v3 обрабатывают больше одновременных транскодов HD на стойку, чем некоторые решения с дискретной графикой, что гарантирует высокую производительность и качество изображения. Монтируемый в стойку сервер RS140 совместим со всей линейкой процессоров Intel Xeon E3 12x5, оснащенных встроенной графикой: E3-1285, E3-1265, E3-1245 и E3-1225. Это идеальное устройство для мультимедийных развлечений, облачных игр и виртуализации рабочих столов.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        
-                    <div class="slide">
-                        <img src="img/TD350.png" />
-                        <div class="slide-text">
-                            <h3>Lenovo ThinkServer TD350</h3>
-                            <p>Оптимально сочетающий в себе высокую производительность и хранилище огромной емкости, позволит исключить инвестиции в стоечную инфраструктуру. Этот сервер форм-фактора Tower нового поколения является уникальным решением, поскольку превосходит модель TD340 по объему оперативной памяти почти в три раза (до 512 ГБ DDR4), а по емкости хранилища — в два раза (до 90 ТБ). Инновационный сервер в корпусе форм-фактора Tower 4U позволяет использовать на 25% больше жестких дисков в каждом уровне 1U по сравнению с конкурентами, обеспечивает более быструю передачу файлов и скорость операций ввода-вывода.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        
-                    <div class="slide">
-                        <img src="img/RD350.png" />
-                        <div class="slide-text">
-                            <h3>Lenovo ThinkServer RD350</h3>
-                            <p>Компактный сервер высотой 1U, обеспечивающий все требуемые возможности, и ничего лишнего. Поддержка двух процессоров Intel Xeon E5-2600 серии v3 обеспечивает высокую производительность, которая повышает эффективность работы сотрудников. Такие особенности этого сервера, как жесткие диски с возможностью горячей замены и резервированные блоки питания, а также встроенный RAID-контроллер, обеспечивают высокую надежность. Этот сервер корпоративного класса предоставляет достаточную вычислительную мощность для использования в инфраструктуре, в качестве сервера для совместной работы и для размещения бизнес-приложений.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        
-                    <div class="slide">
-                        <img src="img/RD450.png" />
-                        <div class="slide-text">
-                            <h3>Lenovo ThinkServer RD450</h3>
-                            <p>В максимальной комплектации Lenovo ThinkServer RD450 имеются два процессора Intel® Xeon® E5-2600 серии v3. Оперативная память объемом до 512 ГБ в 16 слотах обеспечивает колоссальное преимущество по сравнению с серверами предыдущего поколения. Все это гарантирует более быструю и эффективную работу приложений. Благодаря этим улучшениям и очень гибкой конструкции модель RD450 идеально подходит для инфраструктуры компании, например в качестве сервера для совместной работы или размещения бизнес-приложений, а также в качестве веб-сервера либо сервера для хостинга.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        
-                    <div class="slide">
-                        <img src="img/RD550.png" />
-                        <div class="slide-text">
-                            <h3>Lenovo ThinkServer RD550</h3>
-                            <p>Отлично продуманная конструкция обеспечивает более высокую плотность хранения и скорость выполнения операций ввода-вывода, чем когда-либо ранее. За счет уменьшения размеров отсеков жестких дисков и незначительно увеличенных шасси, в том же корпусе 1U RD550 можно разместить 12 отсеков и использовать их для хранения данных или повышения производительности. Для достижения высочайшей производительности используется единственная в своем роде конструкция Lenovo AnyBay, позволяющая размещать в одном отсеке накопители разных типов.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-                        
-                    <div class="slide">
-                        <img src="img/TS300.png" />
-                        <div class="slide-text">
-                            <h3>ASUS TS300-E8-PS4</h3>
-                            <p>Современный высокопроизводительный сервер с поддержкой процессоров Intel Xeon E3-1200 v3. Его отличают качественные компоненты, высокая энергоэффективность, продуманная конструкция и гибкие функции удаленного управления. Для установки плат расширения, включая видеокарты, предлагается один слот PCI Express 3.0 x16, а слот PCI служит для поддержки старого PCI-совместимого оборудования. Сервер оснащается высокоэффективным блоком питания, соответствующим стандарту «80 PLUS Bronze». Совместим с RAID-контроллерами серии ASUS PIKE, с помощью которых можно реализовать поддержку жестких дисков SAS и SATA  и объединить их в массивы RAID различных типов.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        								
-                    <div class="slide">
-                        <img src="img/RS300.png" />
-                        <div class="slide-text">
-                            <h3>ASUS RS300-E8-RS4</h3>
-                            <p>Данный сервер оснащен четырьмя сетевыми контроллерами I210AT от Intel, которые отличаются эффективной работой при низком уровне загрузки центрального процессора. Сетевые порты могут функционировать в режиме объединения (для увеличения пропускной способности) или отказоустойчивости (в случае неполадок с одним портом, другие обеспечат бесперебойную работу сетевого соединения). Дроссели Beat Thermal, отличаются улучшенным охлаждением и повышенной эффективностью работы. Модуль ASMB7-iKVM обеспечивает удаленный доступ к системе, а программное обеспечение ASWM Enterprise предлагает удобный интерфейс для управления всеми функциями сервера.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-        								
-                    <div class="slide">
-                        <img src="img/RS500.png" />
-                        <div class="slide-text">
-                            <h3>Asus RS500-E8-RS</h3>
-                            <p>Стоечный сервер формата 1U, который отличается высокой вычислительной мощностью, поддержкой большого объема системной и дисковой памяти, а также гибкими возможностями расширения конфигурации. Энергоэффективный и надежный, он будет хорошим выбором для серверных приложений, необходимых для малого и среднего бизнеса. Внутренняя конструкция сервера RS500-E8-RS4 и, в частности, его система охлаждения оптимизирована под использование в серверной стойке. Для удобства технического обслуживания целый ряд компонентов сервера устанавливаются без использования инструментов.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-                                        
-                    <div class="slide">
-                        <img src="img/RS520.png" />
-                        <div class="slide-text">
-                            <h3>Asus RS520-E8-RS8</h3>
-                            <p>Энергоэффективный и надежный, сервер будет прекрасным выбором для информационных центров и корпоративных серверных приложений. Все кабели проведены внутри корпуса таким образом, чтобы не мешать вентиляции. Имеется возможность вручную настроить скорость вращения вентилятора системы охлаждения с целью достижения баланса между эффективностью и уровнем шума. Данный сервер является полностью совместимым с дисковыми контроллерами серии ASUS PIKE, которые обеспечивают поддержку интерфейсов SAS и SATA с возможностью создания RAID-массивов. Таким образом, сервер допускает гибкую настройку своей аппаратной конфигурации.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-                                        
-                    <div class="slide">
-                        <img src="img/TS300.png" />
-                        <div class="slide-text">
-                            <h3>ASUS TS300-E8-PS4</h3>
-                            <p>Современный высокопроизводительный сервер с поддержкой процессоров Intel Xeon E3-1200 v3. Его отличают качественные компоненты, высокая энергоэффективность, продуманная конструкция и гибкие функции удаленного управления. Для установки плат расширения, включая видеокарты, предлагается один слот PCI Express 3.0 x16, а слот PCI служит для поддержки старого PCI-совместимого оборудования. Сервер оснащается высокоэффективным блоком питания, соответствующим стандарту «80 PLUS Bronze». Совместим с RAID-контроллерами серии ASUS PIKE, с помощью которых можно реализовать поддержку жестких дисков SAS и SATA  и объединить их в массивы RAID различных типов.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->
-                                        
-                    <div class="slide">
-                        <img src="img/RS300.png" />
-                        <div class="slide-text">
-                            <h3>ASUS RS300-E8-RS4</h3>
-                            <p>Данный сервер оснащен четырьмя сетевыми контроллерами I210AT от Intel, которые отличаются эффективной работой при низком уровне загрузки центрального процессора. Сетевые порты могут функционировать в режиме объединения (для увеличения пропускной способности) или отказоустойчивости (в случае неполадок с одним портом, другие обеспечат бесперебойную работу сетевого соединения). Дроссели Beat Thermal, отличаются улучшенным охлаждением и повышенной эффективностью работы. Модуль ASMB7-iKVM обеспечивает удаленный доступ к системе, а программное обеспечение ASWM Enterprise предлагает удобный интерфейс для управления всеми функциями сервера.</p>
-                        </div><!-- /slider-text -->
-                    </div><!-- /slide -->   
-                </div><!-- /slider -->
+                </div>
             </div>
         </section>
+        <section class="row configurator">
+            <a name="configurator"></a>
+            <h2>Подберите подходящую конфигурацию</h2>
+            <span class="line blue"></span>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                <table id="configurator-table" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Компонент</th>
+                            <th>Наименование</th>
+                            <th style="display:none"></th>
+                            <th style="text-align:center">Цена&nbsp;USD&nbsp;без&nbsp;НДС</th>
+                            <th style="display:none"></th>
+                            <th style="text-align:center">Срок&nbsp;поставки,&nbsp;дней</th>
+                            <th>Количество</th>
+                            <th id="clear-all">
+                                <button type="button" class="btn btn-danger btn-xs" title="Очистить все">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="platform">
+                            <td class="component" data-relevant="">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="platform">Платформа</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td></td>
+                            <td class="clear"></td>
+                        </tr>
+                        <tr id="cpu">
+                            <td class="component">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="cpu">Процессор</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td class="number"></td>
+                            <td class="clear"></td>
+                        </tr>
+                        <tr id="ram">
+                            <td class="component">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="ram">Оперативная&nbsp;память</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td class="number"></td>
+                            <td class="clear"></td>
+                        </tr>
+                        <tr id="ssd">
+                            <td class="component">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="ssd">SSD&nbsp;диск</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td class="number"></td>
+                            <td class="clear"></td>
+                        </tr>
+                        <tr id="hdd">
+                            <td class="component">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="hdd">Жесткий&nbsp;диск</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td class="number"></td>
+                            <td class="clear"></td>
+                        </tr>
+                        <tr id="options">
+                            <td class="component">
+                                <a href="#" class="add-cmpt" data-toggle="modal" data-target=".bs-example-modal-lg" data-component="options">Дополнительные&nbsp;опции</a>
+                            </td>
+                            <td class="name"></td>
+                            <td class="shortname"></td>
+                            <td class="price"></td>
+                            <td class="price-hidden"></td>
+                            <td class="avail"></td>
+                            <td class="number"></td>
+                            <td class="clear"></td>
+                        </tr>
+                    </tbody>
+                </table>
         
+                <button id="add-cmpt" class="btn btn-primary">Добавить</button>
+                <select id="additional-cmpt" class="form-control">
+                    <option data-updatedcmpt="ssd" data-component="ssd">SSD диск</option>
+                    <option data-updatedcmpt="hdd" data-component="hdd">Жесткий диск</option>
+                    <option data-updatedcmpt="options" data-component="options">Дополнительные опции</option>
+                </select>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">Учитывать совместимость компонентов
+                    </label>
+                </div>
+                <div class="clear"></div>
+                <div class="config">
+                    <table id="config-table" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Наименование вашей конфигурации</th>
+                                <th style="text-align:center">Цена&nbsp;USD&nbsp;без&nbsp;НДС</th>
+                                <th style="text-align:center">Количество</th>
+                                <th style="text-align:center">Итого&nbsp;USD&nbsp;без&nbsp;НДС</th>
+                                <th style="text-align:center">Срок&nbsp;поставки,&nbsp;дней</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="total-name">
+                                    <span>Сервер CDL (</span>
+                                    <span class="platform"></span>
+                                    <span class="cpu"></span>
+                                    <span class="ram"></span>
+                                    <span class="ssd"></span>
+                                    <span class="hdd"></span>
+                                    <span class="options"></span>
+                                    <span>ТУ РБ 190694331.001-2016 )</span>
+                                </td>
+                                <td class="total-price"></td>
+                                <td class="number">
+                                    <input type="text" id="server-count" value="1" class="form-control" placeholder="1">
+                                </td>
+                                <td class="price-for-count"></td>
+                                <td class="total-avail"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form id="send-config" action="mail-config.php" method="post">
+                        <div class="form-group">
+                            <p>Чтобы получить счет на этот сервер, уточнить срок поставки и возможность скидки, запоните поля ниже,
+                                и отправьте запрос менеджеру:</p>
+                            <input type="text" name="company" class="form-control" id="InputCompany" placeholder="Название вашей компании" required>
+                            <input type="tel" name="tel" class="form-control tel" id="InputTel" placeholder="Ваш телефон" required>
+                            <button type="submit" class="btn btn-primary submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+        
+            <!-- Modal -->
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th style="display:none">Короткое имя</th>
+                                        <th>Цена&nbsp;USD</th>
+                                        <th>Срок&nbsp;поставки,&nbsp;дней</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="row b-problem">
-           <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <h2>Какие проблемы решит сервер</h2>
                 <span class="line blue"></span>
                 <ul>
@@ -252,110 +331,107 @@
                     <li class="clock">Круглосуточная доступность интернета и корпоративной почты</li>
                     <li class="network">Организация взаимодействия большого количества рабочих мест</li>
                     <li class="lock">Надежное хранение и защита корпоративной информации</li>
-                </ul>   
-           </div>
-        </section>
-        
-        <div style="display: none;">
-            <div id="fields">
-                <form class="popup" action="mail.php" method="post" name="ContactForm">
-                <input class="field" placeholder="Ваш телефон" type="tel" name="tel" required />
-                <input class="send" type="submit" name="submit" value="Заказать звонок" />
-                </form>
+                </ul>
             </div>
-        </div>
-           
+        </section>
         <section class="b-callback">
-            <form action="mail.php" method="post" name="ContactForm">
-                <input class="field" placeholder="Ваше имя" type="text" name="name" required/>
-                <input class="field" placeholder="Ваш телефон" type="tel" name="tel" required />
+            <form class="form" action="mail.php" method="post" name="contactform">
+                <input class="field name" placeholder="Ваше имя" type="text" name="name" required/>
+                <input class="field tel" placeholder="Ваш телефон" type="tel" name="tel" required />
                 <input class="send" type="submit" name="submit" value="Заказать звонок" />
             </form>
         </section>
-        
         <section class="row b-howto">
             <a name="howto"></a>
             <h2>Как мы работаем</h2>
             <span class="line red"></span>
-               
-                <div class="col-xs-12 col-sm-4">
-                    <img src="img/chat.png" alt="">
-                    <p>Оставьте заявку, и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</p>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <img src="img/config.jpg" alt="">
-                    <p>Исходя из требований мы подберем и&nbsp;предложим конфугурации оборудования</p>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <img src="img/ok.png" alt="">
-                    <p>Заключаем договор и&nbsp;досталяем оборудование к&nbsp;вам в&nbsp;офис</p>
-                </div>
-        </section>
         
+            <div class="col-xs-12 col-sm-4">
+                <img src="img/chat.png" alt="">
+                <p>Оставьте заявку, и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <img src="img/config.png" alt="">
+                <p>Исходя из требований мы подберем и&nbsp;предложим конфугурации оборудования</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <img src="img/ok.png" alt="">
+                <p>Заключаем договор и&nbsp;досталяем оборудование к&nbsp;вам в&nbsp;офис</p>
+            </div>
+        </section>
         <section class="row b-contacts">
             <a name="contacts"></a>
             <h2>Контакты</h2>
             <span class="line blue"></span>
             <div class="col-xs-12 col-sm-4">
-                <span>Корпоративный&nbsp;стандарт</span>   
+                <span>Корпоративный&nbsp;стандарт</span>
             </div>
             <div class="col-xs-12 col-sm-4">
-                <span>тел.:&nbsp;+375&nbsp;44&nbsp;776-04-30</span>   
+                <span>тел.:&nbsp;+375&nbsp;44&nbsp;776-04-30</span>
             </div>
             <div class="col-xs-12 col-sm-4">
-                <span><a href="mailto: k.standart@cdls.by">email:&nbsp;k.standart@cdls.by</a></span>
+                <span>
+                    <a href="mailto: k.standart@cdls.by">email:&nbsp;k.standart@cdls.by</a>
+                </span>
             </div>
         
         </section>
         <section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13271.19221053495!2d27.67519151343001!3d53.9843578405214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc8fbdc9bf071%3A0x723dfc52cedb22cf!2z0KfQnyDQmtC-0YDQv9C-0YDQsNGC0LjQstC90YvQuSDRgdGC0LDQvdC00LDRgNGC!5e0!3m2!1sru!2sru!4v1465928753609" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13271.19221053495!2d27.67519151343001!3d53.9843578405214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc8fbdc9bf071%3A0x723dfc52cedb22cf!2z0KfQnyDQmtC-0YDQv9C-0YDQsNGC0LjQstC90YvQuSDRgdGC0LDQvdC00LDRgNGC!5e0!3m2!1sru!2sru!4v1465928753609"
+                width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
     </div>
-
-<script>
-    var showMenu = document.getElementById('nav');
-    var currentStatus = 'hide';
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter27406394 = new Ya.Metrika({
+                        id: 27406394,
+                        webvisor: true,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
     
-    function dropMenu(){
-        if(currentStatus == 'hide'){
-            showMenu.style.display = 'block';
-            currentStatus = 'show';
-        }
-        
-        else if(currentStatus == "show"){
-            showMenu.style.display = 'none';
-            currentStatus = 'hide';
-        }
-    }
-</script>
-<script>
-    $(document).ready(function(){
-        $('a[href^="#"]').click(function(){ //берем все ссылки атрибу href которых начинается с #
-          var $element = $('a[name=' + $(this).attr('href').substr(1) + ']');
-          if($element.length == 1) { //на странице есть только 1 элемент с указанным якорем
-             $('html, body').animate({ scrollTop: $element.offset().top }, 500); // анимируем скролл к элементу
-          }     
-          return false;
-        });
-    });
-</script>
-<script type="text/javascript"> // fancybox
-    $(document).ready(function() {
-        $("a[rel=callback]").fancybox({
-            'titlePosition' : 'inside',
-            'transitionIn' : 'none',
-            'transitionOut' : 'none',
-            'overlayOpacity' : 0.7 ,
-            'overlayColor' : '#000',
-            'showNavArrows' : '',
-            'showCloseButton' : 'true',
-            'centerOnScroll' : 'true',
-            'autoWidth' : 'true',
-            'autoScale' : 'true',
-            'autoDimensions' : 'true',
-            'autoResize' : 'true',
-        });
-    });
-</script>
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/27406394" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <!-- Код тега ремаркетинга Google -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1017141777;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js" defer>
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017141777/?value=0&amp;guid=ON&amp;script=0"
+            />
+        </div>
+    </noscript>
+    <!-- / Код тега ремаркетинга Google -->
+    <script type="text/javascript" src="https://consultsystems.ru/script/27312/" charset="utf-8" defer></script>
 </body>
 </html>

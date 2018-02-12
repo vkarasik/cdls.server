@@ -1,6 +1,6 @@
 /*!
 autor: Karasik Vadim
-project: 
+project: cdls servers
 */
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -108,17 +108,21 @@ table {
     margin-left: 0;
 }
 
-body{font-size: 62.5%;}
+body{
+    font-size: 62.5%;
+    font-family: 'exo_2.0regular';
+}
 
 header{
     background: url(../img/header-bg.jpg) no-repeat;
     background-size: cover;
+    min-height: 550px;
     padding-bottom: 50px;
     
     
     .top-line{
         background: rgba(232,232,232,0.5);
-        margin-bottom: 40px;
+        margin-bottom: 100px;
         padding: 5px 15px 5px 0;
     }
     
@@ -155,10 +159,9 @@ nav{
         margin: 0 2%;
         text-decoration: none;
         color: #ffffff;
-        transition: all 1s ease 0s;
         
         &:hover{
-            color: #1f2b38;
+            color: #d9d9d9;
             text-decoration: none;
         }
         
@@ -197,19 +200,6 @@ nav{
         }
     }
 
-@keyframes action{
-    0%{
-        transform: scale(1);
-    }
-    
-    50%{
-        transform: scale(1.1);
-    }
-    
-    100%{
-        transform: scale(1);
-    }
-}
 
 input{
     max-width: 250px;
@@ -234,13 +224,26 @@ input{
         background: #ff665e;
         background: linear-gradient(#ff665e, #ff665e);
         vertical-align: top;
-        animation: action 4s infinite ease-in;
         
         &:hover{
             background: #ff5047;
         }
     }
 }
+
+.form-response{
+    display: inline-block;
+    padding: 20px;
+    font-size: 160%;
+    border-radius: 3px;
+    font-family: 'exo_2.0regular';
+    text-align: center;
+}
+
+.form-response_success{background: #dff0d8;}
+.form-response_error{background: #ecafaf;}
+
+
 
 h2{
     margin: 40px 0 20px;
@@ -465,7 +468,179 @@ h3{
     min-width: 100% !important;
 }
 
+.home{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-family: "HelveticaNeueCyr-Roman";
+    font-size: 160%;
+     
+    &:hover,&:active,&:visited,&:focus{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+.configurator{
+    
+    background: #f0f8ff;
+    padding: 0 0 70px;
+    
+    #configurator-table, #config-table{
+        font-size: 180%;
+        background: #fff;
+        
+        @media(max-width: 940px){
+            font-size: 140%;
+        }
+    }
+    
+    #add-cmpt, .submit{
+        vertical-align: top;
+        margin-right: 5px;
+    }
+    
+    p{font-size: 180%;}
+    
+    .config{
+        margin-top: 45px;
+    }
+    
+    input{margin: 0 10px 0 0;}
+    
+}
 
+.table-hover>tbody>tr:hover {
+    background-color: #f0f8ff;
+}
+
+.modal-body{
+    font-size: 170%;   
+}
+
+.modal-title{
+        font-size: 180%;    
+    }
+
+.form-control{
+    width: 30%;
+    display: inline-block;
+}
+
+.number{
+    width: 30px;
+    
+    input{
+        width: 80%;
+    }
+}
+
+.clear,
+#clear-all,
+.price,
+.avail,
+.number,
+.del-cmpt,.choose, .cmpt-avail, .cmpt-price, .total-avail, .total-price, .price-for-count{
+    text-align: center;
+}
+
+
+.component{
+    a{
+        border-bottom: 1px dashed #337ab7;
+        
+        &:hover,&:active,&:visited,&:focus{
+            border: none;
+            text-decoration: none;
+        }
+    }
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.shortname,
+.price-hidden{display: none;}
+
+thead{
+    background: #606060;
+    color: #ffffff;
+}
+
+.subcategory{
+    background: #777777;
+    color: #ffffff;
+    
+    &:hover{
+        background: #777777 !important;
+    color: #ffffff !important;    
+    }
+}
+
+form{
+    
+    input,select{
+        margin-bottom: 15px;
+    }
+    
+    p{
+        margin-bottom: 15px;
+    }
+}
+
+.pricelist{
+    font-size: 160%;
+    margin: 40px 0;
+    
+    h1{
+        font-size: 200%;
+        font-family: "HelveticaNeueCyr-Light";
+        margin-bottom: 20px;
+    }
+    
+    .form-control{
+        width: 50%;
+    }
+    
+    .name{
+        text-align: left;
+    }
+    
+    .show-price{
+        margin-bottom: 20px;
+    }
+}
+
+.checkbox{
+    //display: inline-block;
+    line-height: 1.35;
+    float: right;
+    
+    label{
+        font-size: 160%;
+        line-height: 0.9;
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.form-group{
+    text-align: center;
+}
+
+#send-config{
+    text-align: center;
+}
+
+
+//Extra small devices Phones (<768px)	
+//Small devices Tablets (≥768px)	
+//Medium devices Desktops (≥992px)	
+//Large devices Desktops (≥1200px)
 
 
 
